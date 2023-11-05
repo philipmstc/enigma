@@ -12,7 +12,6 @@ public class RotorBox implements Cipher{
         this.rotors = rotors;
     }
 
-
     @Override
     public char forwards(char in) {
         int currentRotor = 0;

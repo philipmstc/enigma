@@ -2,16 +2,14 @@ package net.shchoo.simple.enigma.rotor;
 
 import java.util.Collection;
 
-import net.shchoo.simple.enigma.Cipher;
-
-public class Rotor implements Cipher
+public class RotorImpl implements Rotor
 {
     private final char[] forwardWiring;
     private final Collection<Character> notches;
     private final char[] backwardWiring;
     private int position;
 
-    public Rotor(
+    public RotorImpl(
         char[] wiring, 
         Collection<Character> notches,
         int position)
@@ -25,6 +23,7 @@ public class Rotor implements Cipher
         this.position = position;
     }
 
+    @Override
     public boolean turnOver() 
     {
         position = (position + 1) % 26;

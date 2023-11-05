@@ -11,16 +11,14 @@ public class Letter
 
     public Letter through(Cipher cipher) 
     {
-        Letter l = new Letter(cipher.forwards(value));
-        System.out.println(this.value + "->" + l.value);
-        return l;
+        this.value = cipher.forwards(value);
+        return this;
     }
 
     public Letter backThrough(Cipher cipher) 
     {
-        Letter l = new Letter(cipher.backwards(value));
-        System.out.println(this.value + "->" + l.value);
-        return l;
+       this.value = cipher.backwards(value);
+       return this;
     }
 
     public char out()

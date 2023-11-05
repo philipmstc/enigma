@@ -7,7 +7,7 @@ public class Reflector implements Cipher {
     private final char[] wiring;
 
     public Reflector() {
-        this.wiring = new char[]{'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+        this.wiring = new char[]{'E','J','M','Z','A','L','Y','X','V','B','W','F','C','R','Q','U','O','N','T','S','P','I','K','H','G','D'};
     }
 
     public Reflector(char[] wiring) {

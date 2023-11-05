@@ -1,5 +1,6 @@
 package net.shchoo.simple.enigma;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,6 +13,13 @@ public class PlugBoard implements Cipher {
 
     public PlugBoard(Map<Character, Character> plugs) {
         this.plugs = plugs;
+    }
+
+    public PlugBoard(String plugs) { 
+        this.plugs = new HashMap<>();
+        Arrays.asList(plugs.split(" "))
+        .stream()
+        .forEach(split -> add(split.charAt(0), split.charAt(1)));
     }
     
     public void add(char from, char to) { 

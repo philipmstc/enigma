@@ -17,7 +17,7 @@ public class RotorImpl implements Rotor
         this.forwardWiring = wiring;
         this.backwardWiring = new char[wiring.length];
         for (int i = 0; i < wiring.length; i++) {
-            backwardWiring[(wiring[i] - 'A') % 26] = wiring[i];
+            backwardWiring[(wiring[i] - 'A') % 26] = (char)('A' + i);
         }
         this.notches = notches;
         this.position = position;
@@ -33,12 +33,20 @@ public class RotorImpl implements Rotor
     @Override
     public char forwards(char in) 
     {
-        return forwardWiring[(in - 'A' + position) % 26];
+        int index = (in - 'A') % 26;
+        index = (index + position) % 26;
+        char to =  forwardWiring[index];
+        char actual = (char)('A' + (to - 'A' - position + 26) % 26);
+        return actual;
     }
 
     @Override
     public char backwards(char in) 
     {
-        return backwardWiring[(in - 'A' + position) % 26];
+        int index = (in - 'A') % 26;
+        index = (index + position) % 26;
+        char to =  backwardWiring[index];
+        char actual = (char)('A' + (to - 'A' - position + 26) % 26);
+        return actual;
     }
 }

@@ -28,7 +28,7 @@ public class RotorFactory {
     {
         char[] w = new char[26];
         Collection<Character> notches = new ArrayList<>();
-        int start = 'A' - startingPos;
+        int start = startingPos-'A';
         int curr = 0;
         for (int i = 0; i < wiring.length(); i++) {
             char c = wiring.charAt(i);

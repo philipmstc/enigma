@@ -2,11 +2,11 @@ package net.shchoo.simple.enigma.rotor;
 
 public enum StandardRotor{
                 //  "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    I       ("EKMFLGDQVZNTOWYHXUSPAIBRCJ"),
-    II      ("AJDKSIRUXBLHWTMCQGZNPYFVOE"),
-    III     ("BDFHJLCPRTXVZNYEIWGAKMUSQO"),
-    IV      ("ESOVPZJAYQUIRHXLNFTGKDCMWB"),
-    V       ("VZBRGITYUPSDNHLXAWMJQOFECK");
+    I       ("EKMFLGDQVZNTOWYHXUSPAIBR^CJ"),
+    II      ("AJDKSIRUXBLHWTMCQGZNPYF^VOE"),
+    III     ("BDFHJLCPRTXVZNYEIW^GAKMUSQO"),
+    IV      ("ESOVPZJAYQUIRHXLNFTGK^DCMWB"),
+    V       ("VZBRGITYUPSDNHLXA^WMJQOFECK");
 
     private final String wiring;
 
